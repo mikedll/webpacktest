@@ -1,3 +1,6 @@
 
 dist/*.js
+dist/*.jpg
+dist/*.png
+
 node_modules/
