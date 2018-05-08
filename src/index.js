@@ -1,10 +1,10 @@
+
 function getComponent() {
 
-  return import(/* webpackChunkName: "lodash" */ 'lodash').then(_ => {
+  return import(/* webpackChunkName: "whacky" */ './another-lib.js').then(whacky => {
     var element = document.createElement('div');
-    
-    // Lodash, now imported by this script.
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+
+    element.innerHTML = whacky.default();
 
     return element;    
   }).catch(error => 'An error occurred while loading the component');
