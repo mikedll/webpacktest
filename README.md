@@ -7,7 +7,7 @@ Build webpack bundle(s).
 
     > npm run build
 
-Open `dist/index.html`.
+Browse to `dist/index.html`.
 
 #### Issue with __webpack_require__.e undefined
 
