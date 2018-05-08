@@ -2,5 +2,6 @@
 dist/*.js
 dist/*.jpg
 dist/*.png
+dist/*.ttf
 
 node_modules/

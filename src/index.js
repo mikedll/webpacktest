@@ -1,6 +1,8 @@
 import _ from 'lodash';
 import './style.css';
 import PrettyPicture from './pretty-area2.jpg';
+import Data from './data.xml';
+
 function component() {
   var rootElement = document.createElement('div');
   
@@ -18,6 +20,8 @@ function component() {
 
   rootElement.append(element);
   rootElement.append(element2);
+
+  console.log(Data);
   
   return rootElement;
 }
