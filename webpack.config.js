@@ -4,8 +4,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
-    index: './src/index.js',
-    'another': './src/another-entry.js'
+    server: './src/server-side-render-entry.js',
+    client: './src/client-app-with-code-splits.js'
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
