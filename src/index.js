@@ -1,5 +1,5 @@
 
-require.context("./components", true);
+require.context("components", true);
 
 function getComponent() {
 
