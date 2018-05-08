@@ -1,7 +1,4 @@
 
-dist/*.js
-dist/*.jpg
-dist/*.png
-dist/*.ttf
+dist/*
 
 node_modules/
