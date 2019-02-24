@@ -12,7 +12,11 @@
     "license": "MIT",
     "devDependencies": {
         "clean-webpack-plugin": "^0.1.19",
+        "css-loader": "^2.1.0",
         "html-webpack-plugin": "^3.2.0",
+        "vue": "^2.6.7",
+        "vue-loader": "^15.6.4",
+        "vue-template-compiler": "^2.6.7",
         "webpack": "^3.11"
     },
     "dependencies": {
