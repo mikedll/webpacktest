@@ -8,6 +8,7 @@ module.exports = {
     main: './src/main.js'
   },
   plugins: [
+    new CleanWebpackPlugin(['dist']),
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       title: "Easy demo."
