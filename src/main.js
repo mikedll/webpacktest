@@ -1,14 +1,11 @@
 
 import $ from 'jquery'
-import Vue from 'vue'
-import Grape from 'grape.vue'
+import ReactDOM from 'react-dom'
+import GrapeContainer from 'grape.jsx'
+
 import _ from 'styles.css'
 
 $(function() {
   $('body').append($('<div id="app"></div>'))
-
-  var vue = new Vue({
-    el: '#app',
-    render: h => h(Grape)
-  })
+  ReactDOM.render(GrapeContainer, $('#app').get(0))
 })

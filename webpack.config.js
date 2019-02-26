@@ -1,6 +1,5 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const VueLoaderPlugin = require('vue-loader/lib/plugin.js')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
@@ -10,7 +9,6 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
-    new VueLoaderPlugin(),
     new ExtractTextPlugin('styles.css'),
     new HtmlWebpackPlugin({
       title: "Easy Demo",
@@ -19,8 +17,14 @@ module.exports = {
   ],
   module: {
     rules: [
-      { test: /\.vue$/, use: 'vue-loader' },
-      { test: /\.css$/, use: ExtractTextPlugin.extract({use: 'css-loader', fallback: 'vue-style-loader'})}
+      { test: /\.jsx$/,
+        use: [{
+          loader: 'babel-loader',
+          options: { cacheDirectory: 'tmp/babel-loader-cache' }
+        }],
+        exclude: '/node_modules/'
+      },
+      { test: /\.css$/, use: ExtractTextPlugin.extract({use: 'css-loader'})}
     ]
   },
   output: {

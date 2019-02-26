@@ -12,14 +12,16 @@
     "author": "",
     "license": "MIT",
     "devDependencies": {
+        "@babel/core": "^7.3.4",
+        "@babel/preset-react": "^7.0.0",
+        "babel-loader": "^8.0.5",
         "clean-webpack-plugin": "^0.1.19",
         "css-loader": "^2.1.0",
         "extract-text-webpack-plugin": "^3.0.2",
         "html-webpack-plugin": "^3.2.0",
         "jquery": "^3.3.1",
-        "vue": "^2.6.7",
-        "vue-loader": "^15.6.4",
-        "vue-template-compiler": "^2.6.7",
+        "react": "^16.8.3",
+        "react-dom": "^16.8.3",
         "webpack": "^3.11"
     },
     "dependencies": {}
