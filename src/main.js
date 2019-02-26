@@ -8,5 +8,5 @@ import _ from 'styles.css'
 
 $(function() {
   $('body').append($('<div id="app"></div>'))
-  ReactDOM.render(React.createElement(GrapeContainer, {}, null), $('#app').get(0))
+  ReactDOM.render(React.createElement(GrapeContainer), $('#app').get(0))
 })
