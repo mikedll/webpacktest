@@ -11,6 +11,7 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
+      title: "Easy Demo",
       inject: 'head'
     })
   ],
