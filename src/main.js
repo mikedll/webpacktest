@@ -1,7 +1,7 @@
 
 import $ from 'jquery'
-import Vue from 'vue';
-import Grape from 'grape.vue';
+import Vue from 'vue'
+import Grape from 'grape.vue'
 
 
 $(function() {

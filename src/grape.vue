@@ -3,7 +3,7 @@
   <div class="grape-container">
     Hello. This should be a grape.
     
-    {{ message }}
+    <div class="primary">{{ message }}</div>
 
     <button v-on:click="onEnhance">Enhance</button>
   </div>
@@ -28,5 +28,5 @@ export default {
 </script>
 
 <style>
-  div { padding: 1em; }  
+  .primary { padding: 1em; }
 </style>
