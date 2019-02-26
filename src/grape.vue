@@ -9,9 +9,15 @@
 
   export default {
     props: [],
+    data: {
+      message: "Hello from Grape!"
+    }
   }
 
 </script>
 
-<style>
+<style scoped>
+
+  div { padding: 1em; }
+  
 </style>
