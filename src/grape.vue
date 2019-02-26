@@ -18,6 +18,6 @@
 
 </script>
 
-<style scoped>
-  div { padding: 1em; }  
+<style>
+  div { padding: 2em; }  
 </style>
