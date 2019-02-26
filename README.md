@@ -1,4 +1,10 @@
 
+## Requirements
+
+  Node >= 5.2.0 (for http-server).
+  
+## Using the demo
+
 Install dependencies.
 
     > npm install
