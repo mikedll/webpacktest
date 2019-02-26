@@ -6,7 +6,10 @@ import Grape from 'grape.vue';
 
 
 $(function() {
-  primaryExport();
+  $('body').append($('<div id="app"></div>'))
 
-  // var comp1 = new Grape()
+  var vue = new Vue({
+    el: '#app',
+    render: h => h(Grape)
+  })
 })

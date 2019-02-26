@@ -2,22 +2,22 @@
 
   <div class="grape-container">
     Hello. This should be a grape.
-    {{ message }}
-    
+    {{ message }}    
   </div>
 </template>
 
 <script>
 
   export default {
-    props: [],
-    data: {
-      message: "Hello from Grape!"
+    data: function() {
+      return {
+        message: "Hello from Grape!"
+      }
     }
   }
 
 </script>
 
 <style>
-  div { padding: 2em; }  
+  div { padding: 1em; }  
 </style>
