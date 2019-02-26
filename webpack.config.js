@@ -26,7 +26,7 @@ module.exports = {
     chunkFilename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
-  devtool: 'eval-source-map',
+  devtool: 'source-map',
   resolve: {
     modules: [path.resolve(__dirname, 'src'), "node_modules"]
   }
