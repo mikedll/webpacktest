@@ -12,7 +12,11 @@ export default class GrapeContainer extends React.Component {
   }
   
   onEnhance() {
-    this.setState((state) => {message: state.message + "!"})
+    // @todo: this should be (prevState) => { message: (prevState.message + "!") }
+    // but that's not working for some reason.
+    this.setState((prevState) => {
+      return { message: (prevState.message + "!") }
+    })
   }
   
   render() {
