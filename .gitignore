@@ -1,9 +1,6 @@
 
-tmp/*
+tmp/
 
-dist/*
+dist/
 
 node_modules/
-
-# using a tutorial from a youtube video on one dev machine.
-vue-webpack/
