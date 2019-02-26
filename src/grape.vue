@@ -2,6 +2,8 @@
 
   <div class="grape-container">
     Hello. This should be a grape.
+    {{ message }}
+    
   </div>
 </template>
 
@@ -17,7 +19,5 @@
 </script>
 
 <style scoped>
-
-  div { padding: 1em; }
-  
+  div { padding: 1em; }  
 </style>
