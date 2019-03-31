@@ -1,15 +1,21 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
+const devMode = process.env.NODE_ENV !== 'production'
 
 module.exports = {
+  mode: devMode ? 'development' : 'production',
   entry: {
     main: './src/main.js'
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
-    new ExtractTextPlugin('styles.css'),
+    new MiniCssExtractPlugin({
+      filename: devMode ? '[name].css' : '[name].[hash].css',
+      chunkFilename: devMode ? '[id].css' : '[id].[hash].css'
+    }),
     new HtmlWebpackPlugin({
       title: "Easy Demo",
       inject: 'head'
@@ -24,7 +30,8 @@ module.exports = {
         }],
         exclude: '/node_modules/'
       },
-      { test: /\.css$/, use: ExtractTextPlugin.extract({use: 'css-loader'})}
+      { test: /\.css$/, use: [MiniCssExtractPlugin.loader, 'css-loader']
+      }
     ]
   },
   output: {
