@@ -1,7 +1,9 @@
 
+Small exploration of loading Vue components manually for testing.
+ 
 ## Requirements
 
-  Node >= 5.2.0 (for http-server).
+  Node v10.15
   
 ## Using the demo
 
@@ -9,15 +11,11 @@ Install dependencies.
 
     > npm install
 
-Build webpack bundle(s).
-
-    > npm run build
-
-Watch with webpack as you edit. Still requires refreshing the browser.
+Watch with webpack as you edit.
 
     > npm run watch
 
-Allow external, non-eval source maps to work by serving your app with an HTTP server.
+Run the manual test.
 
-    > npx http-server
+    > node dist/main.bundle.js
 
