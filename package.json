@@ -20,8 +20,6 @@
     "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^2.0.1",
     "core-js": "^3.0.1",
-    "jsdom": "^14.0.0",
-    "jsdom-global": "^3.0.2",
     "mini-css-extract-plugin": "^0.6.0",
     "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.6.10",
