@@ -1,26 +1,26 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const VueLoaderPlugin = require('vue-loader/lib/plugin.js')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin.js')
+
+const devMode = process.env.NODE_ENV !== 'production'
 
 module.exports = {
+  mode: devMode ? 'development' : 'production',
   entry: {
-    main: './src/main.js'
+    main: './jstests/videoForm.js'
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
     new VueLoaderPlugin(),
-    new ExtractTextPlugin('styles.css'),
-    new HtmlWebpackPlugin({
-      title: "Easy Demo",
-      inject: 'head'
+    new CleanWebpackPlugin({cleanOnceBeforeBuildPatterns: ['dist/**/*']}),
+    new MiniCssExtractPlugin({
+      filename: devMode ? '[name].css' : '[name].[hash].css',
+      chunkFilename: devMode ? '[id].css' : '[id].[hash].css'
     })
   ],
   module: {
     rules: [
-      { test: /\.vue$/, use: 'vue-loader' },
-      { test: /\.css$/, use: ExtractTextPlugin.extract({use: 'css-loader', fallback: 'vue-style-loader'})}
+      { test: /\.vue$/, use: 'vue-loader'}
     ]
   },
   output: {
