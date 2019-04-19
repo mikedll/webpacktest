@@ -8,9 +8,9 @@
         "targets": {
           "browsers": "> 1%"
         },
-        "useBuiltIns": {"entry", corejs: 3}
+        "useBuiltIns": "entry",
+        "corejs": 3
       }
-    ],    
-    "@babel/react"
+    ]
   ]
 }
