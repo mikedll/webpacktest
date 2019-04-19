@@ -20,6 +20,13 @@ module.exports = {
   ],
   module: {
     rules: [
+      { test: /\.js$/,
+        use: [{
+          loader: 'babel-loader',
+          options: { cacheDirectory: 'tmp/babel-loader-cache' }
+        }],
+        exclude: '/node_modules/'
+      },      
       { test: /\.vue$/, use: 'vue-loader'}
     ]
   },
