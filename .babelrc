@@ -8,9 +8,14 @@
         "targets": {
           "browsers": "> 1%"
         },
-        "useBuiltIns": "entry"
+        "useBuiltIns": "entry",
+        "corejs": 3
       }
-    ],    
-    "@babel/react"
-  ]
+    ]
+  ],
+  "env": {
+    "test": {
+      "presets": [["@babel/env", {"targets": {"node": "current"} }]]
+    }
+  }
 }
