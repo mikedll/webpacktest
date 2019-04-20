@@ -28,7 +28,14 @@ export default {
   },
   methods: {
     onSubmit: function(e) {
-      
+      this.$.ajax({
+        method: "POST",
+        url: "/videos",
+        success: (data) => {
+          console.log("Successful new video at /videos/" + data.id)
+          this.location.path = '/videos/' + data.id
+        }
+      })
     }
   }
 }
